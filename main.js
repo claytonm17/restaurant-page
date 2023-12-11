@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log('Merry Christmas!')\nalert('Happy Hanukkah')\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 

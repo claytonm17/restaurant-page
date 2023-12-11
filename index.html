@@ -3,9 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
+    <title>Catfish Biff's</title>
+<!-- Remove style tag when completed -->
+<style>
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    :root {
+        font-size: 16px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        --background-fade: rgba(0, 0, 0, 0.8);
+        --border-color: #555555;
+        --light-text-color: #FFFFFA;
+    }
+
+    body {
+        background-image: url(./images/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--background-fade);
+        border-bottom: 1px var(--border-color) solid;
+        color: var(--light-text-color);
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        padding: 1rem;
+        font-family: cursive;
+        font-size: 4rem;
+    }
+
+    nav.navbar {
+        display: flex;
+        gap: 10%;
+    }
+
+    .home-button, .menu-button, .contact-button {
+        background: none;
+        border: none;
+        color: var(--light-text-color);
+        font-size: 1rem;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+    }
+    /* This button will be the selected page */
+    .home-button {
+        border-bottom: solid var(--light-text-color) 1px;
+    }
+    /* Change for each selected page */
+    main {
+        display: flex;
+        flex-direction: column;
+        color: var(--light-text-color);
+        background: var(--background-fade);
+        align-items: center;
+        padding: 1rem;
+        border: solid var(--border-color) 1px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .location-photo {
+        width: 456px;
+        height: 456px;
+        border-radius: 228px;
+        border: solid var(--border-color) 1px;
+    }
+
+    main>h2,p {
+        padding: 1rem;
+    }
+
+    main>img {
+        margin: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        color: var(--light-text-color);
+        background: var(--background-fade);
+        margin-top: 3rem;
+        border-top: solid var(--border-color) 1px;
+    }
+
+    footer>p {
+        padding: 1px;
+    }
+
+</style>
 </head>
 <body>
+    <!-- remove everything but html, body, script tag, and div id=content tags once complete-->
+    <div class="page">
+        <div class="heading">
+            <h1>Catfish Biff's</h1>
+            <nav class="navbar">
+                <button class="home-button">Home</button>
+                <button class="menu-button">Menu</button>
+                <button class="contact-button">Contact</button>
+            </nav>
+        </div>
+        <main class="body">  
+            <h2>A staple at The Ohio State University</h2>
+            <p>Serving up delicious homemade pizza and subs!</p>
+            <img src="./images/location.jpeg" alt="A photo of the location of Catfish Biff's" class="location-photo">
+            <p>Pickup and delivery availible</p>
+        </main>
+        <footer>
+            <p>Created by Claytonm17 on GitHub</p>
+        </footer>
+    </div>
+    <!-- End -->
     <div class="content"></div>
     <script src="main.js"></script>
 </body>
