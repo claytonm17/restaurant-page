@@ -1,2 +1,2 @@
-Restaurant page created using Javascript.
-Built with Webpack.
+<b>Restaurant Page</b>  
+Created using: HTML, CSS, Javascript, Webpack  
