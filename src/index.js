@@ -21,4 +21,4 @@ function buildPage(template, button) {
 }
 
 // Arguments (specific page building function, active button for page)
-buildPage(createMenu(), 'menu');
+//buildPage(createMenu(), 'menu');
