@@ -1,10 +1,12 @@
 import pageTemplate from './modules/page-template.js';
 import homeTemplate from './modules/home.js';
 import menuTemplate from './modules/menu.js';
+import contactTemplate from './modules/contact.js';
 
 const { createHeader, createFooter } = pageTemplate;
 const { createHomePage }  = homeTemplate;
 const { createMenu } = menuTemplate;
+const { createContactPage } = contactTemplate;
 
 function buildPage(template, button) {
     // Page creation
@@ -21,4 +23,4 @@ function buildPage(template, button) {
 }
 
 // Arguments (specific page building function, active button for page)
-//buildPage(createMenu(), 'menu');
+buildPage(createContactPage(), 'contact');
