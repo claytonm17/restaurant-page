@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_page_template_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/page-template.js */ \"./src/modules/page-template.js\");\n\n\nconst { createHeader, createFooter } = _modules_page_template_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n\n// Page creation\nconst contentContainer = document.querySelector('#content');\ncontentContainer.appendChild(createHeader(\"Catfish Biff's\"))\n\n// Unique page content goes here\n\ncontentContainer.appendChild(createFooter());\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_page_template_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/page-template.js */ \"./src/modules/page-template.js\");\n/* harmony import */ var _modules_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/home.js */ \"./src/modules/home.js\");\n\n\n\nconst { createHeader, createFooter } = _modules_page_template_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\nconst { createHomePage }  = _modules_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n\nfunction buildPage(template, button) {\n    // Page creation\n    const contentContainer = document.querySelector('#content');\n    contentContainer.appendChild(createHeader(\"Catfish Biff's\"))\n\n    // Unique page content goes here\n    contentContainer.appendChild(template);\n    // Set button to active\n    const newButton = document.querySelector(`.${button}-button`);\n    newButton.classList.add('active');\n\n    contentContainer.appendChild(createFooter());\n}\n\n// Arguments (specific page building function, active button for page)\nbuildPage(createHomePage(), 'home');\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/home.js":
+/*!*****************************!*\
+  !*** ./src/modules/home.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createHomePage() {\n    // Parent element\n    const homePage = document.createElement('main');\n    homePage.setAttribute('class', 'body');\n\n    // h2\n    const secondTitle = document.createElement('h2');\n    secondTitle.textContent = 'A staple at The Ohio State University';\n    homePage.appendChild(secondTitle);\n\n    // p tag 1\n    const subText = document.createElement('p');\n    subText.textContent = 'Serving up delicious homemade pizza and subs!';\n    homePage.appendChild(subText);\n\n    // image\n    const locationImage = document.createElement('img');\n    locationImage.src = './images/location.jpeg';\n    locationImage.setAttribute('class', 'location-photo');\n    locationImage.setAttribute('alt', \"A photo of the location of Catfish Biff's along the south campus border of The Ohio State University\");\n    homePage.appendChild(locationImage);\n\n    // p tag 2\n    const pickupText = document.createElement('p');\n    pickupText.textContent = 'Pickup and delivery available!';\n    homePage.appendChild(pickupText);\n\n    return homePage;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    createHomePage,\n});\n\n//# sourceURL=webpack://restaurant-page/./src/modules/home.js?");
 
 /***/ }),
 
