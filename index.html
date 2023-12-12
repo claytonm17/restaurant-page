@@ -18,6 +18,8 @@
         --background-fade: rgba(0, 0, 0, 0.8);
         --border-color: #555555;
         --light-text-color: #FFFFFA;
+        --alt-text-color: #f67132;
+        --alt-background-color: #011001;
     }
 
     body {
@@ -56,11 +58,11 @@
         cursor: pointer;
         padding-bottom: 0.5rem;
     }
-    /* This button will be the selected page */
+
     .active {
         border-bottom: solid var(--light-text-color) 1px;
     }
-    /* Change for each selected page */
+
     main {
         display: flex;
         flex-direction: column;
@@ -101,9 +103,94 @@
         padding: 1px;
     }
 
+    /* Menu Page specific */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        justify-items: center;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        border: solid var(--border-color) 1px;
+        border-radius: 1rem;
+        background-color: var(--alt-background-color);
+    }
+
+    .menu-item>p {
+        text-align: center;
+    }
+
+    .price {
+        padding-top: 0px;
+        color: var(--alt-text-color);
+    }
+
+    .item-photo {
+        width: 16rem;
+        height: auto;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border: solid var(--border-color) 1px;
+    }
+    /* End menu page */
 </style>
 </head>
 <body>
+    <!-- Testing to build a menu page
+    <div class="page">
+        <header class="heading">
+            <h1>Catfish Biff's</h1>
+            <nav class="navbar">
+                <button class="home-button active">Home</button>
+                <button class="menu-button">Menu</button>
+                <button class="contact-button">Contact</button>
+            </nav>
+        </header>
+        <main class="body">  
+            <h2>We ain't got no fish!</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <p>Small 10" 2-Item Pizza</p>
+                    <p class="price">$7.50</p>
+                    <img src="./images/pizza-photo.jpg" alt="A photo of a delicious pizza" class="item-photo">
+                </div>
+                <div class="menu-item">
+                    <p>Italian Hot Sub</p>
+                    <p class="price">$6.50</p>
+                    <img src="./images/sub-photo.jpg" alt="A photo of a delicious submarine sandwich" class="item-photo">
+                </div>
+                <div class="menu-item">
+                    <p>Medium 12" 2-Item Pizza</p>
+                    <p class="price">$8.50</p>
+                    <img src="./images/pizza-photo.jpg" alt="A photo of a delicious pizza" class="item-photo">
+                </div>
+                <div class="menu-item">
+                    <p>Ham & Cheese Sub</p>
+                    <p class="price">$6.50</p>
+                    <img src="./images/sub-photo.jpg" alt="A photo of a delicious submarine sandwich" class="item-photo">
+                </div>
+                <div class="menu-item">
+                    <p>Large 14" 2-Item Pizza</p>
+                    <p class="price">$9.50</p>
+                    <img src="./images/pizza-photo.jpg" alt="A photo of a delicious pizza" class="item-photo">
+                </div>
+                <div class="menu-item">
+                    <p>Pizza Sub</p>
+                    <p class="price">$7.50</p>
+                    <img src="./images/sub-photo.jpg" alt="A photo of a delicious submarine sandwich" class="item-photo">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Created by Claytonm17 on GitHub</p>
+        </footer>
+    </div>
+    end -->
     <div id="content"></div>
     <script src="main.js"></script>
 </body>
