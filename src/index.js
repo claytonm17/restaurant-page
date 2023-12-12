@@ -1,8 +1,10 @@
 import pageTemplate from './modules/page-template.js';
 import homeTemplate from './modules/home.js';
+import menuTemplate from './modules/menu.js';
 
 const { createHeader, createFooter } = pageTemplate;
 const { createHomePage }  = homeTemplate;
+const { createMenu } = menuTemplate;
 
 function buildPage(template, button) {
     // Page creation
@@ -19,4 +21,4 @@ function buildPage(template, button) {
 }
 
 // Arguments (specific page building function, active button for page)
-buildPage(createHomePage(), 'home');
+buildPage(createMenu(), 'menu');
