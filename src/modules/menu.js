@@ -1,3 +1,6 @@
+import pizza from '../images/pizza-photo.jpg';
+import sub from '../images/sub-photo.jpg';
+
 function createMenu() {
     // Parent element
     const menuPage = document.createElement('main');
@@ -28,18 +31,18 @@ function createMenu() {
         const image = document.createElement('img');
         image.setAttribute('class', 'item-photo');
         image.setAttribute('alt', 'A delicious looking photo of the menu item listed');
-        image.setAttribute('src', `./images/${img}.jpg`);
+        image.setAttribute('src', img);
         menuItem.appendChild(image);
     
         return menuItem
     }
 
-    menuGrid.appendChild(createMenuItem('Small 10" 2-Item Pizza', '$7.50', 'pizza-photo'));
-    menuGrid.appendChild(createMenuItem('Italian Hot Sub', '$6.50', 'sub-photo'));
-    menuGrid.appendChild(createMenuItem('Medium 12" 2-Item Pizza', '$8.50', 'pizza-photo'));
-    menuGrid.appendChild(createMenuItem('Ham & Cheese Sub', '$6.50', 'sub-photo'));
-    menuGrid.appendChild(createMenuItem('Large 14" 2-Item Pizza', '$9.50', 'pizza-photo'));
-    menuGrid.appendChild(createMenuItem('Pizza Sub', '$7.50', 'sub-photo'));
+    menuGrid.appendChild(createMenuItem('Small 10" 2-Item Pizza', '$7.50', pizza));
+    menuGrid.appendChild(createMenuItem('Italian Hot Sub', '$6.50', sub));
+    menuGrid.appendChild(createMenuItem('Medium 12" 2-Item Pizza', '$8.50', pizza));
+    menuGrid.appendChild(createMenuItem('Ham & Cheese Sub', '$6.50', sub));
+    menuGrid.appendChild(createMenuItem('Large 14" 2-Item Pizza', '$9.50', pizza));
+    menuGrid.appendChild(createMenuItem('Pizza Sub', '$7.50', sub));
 
     menuPage.appendChild(menuGrid);
 

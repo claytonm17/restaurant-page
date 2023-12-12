@@ -1,3 +1,5 @@
+import map from '../images/map.jpeg';
+
 function createContactPage() {
     const contactPage = document.createElement('main');
     contactPage.setAttribute('class', 'body');
@@ -15,7 +17,7 @@ function createContactPage() {
     contactPage.appendChild(emailAddress);
 
     const mapImage = document.createElement('img');
-    mapImage.setAttribute('src', './images/map.jpeg');
+    mapImage.setAttribute('src', map);
     mapImage.setAttribute('alt', "A map with the location of Catfish Biff's")
     mapImage.setAttribute('class', 'map');
     contactPage.appendChild(mapImage);

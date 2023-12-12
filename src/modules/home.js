@@ -1,3 +1,5 @@
+import location from '../images/location.jpeg'
+
 function createHomePage() {
     // Parent element
     const homePage = document.createElement('main');
@@ -15,7 +17,7 @@ function createHomePage() {
 
     // image
     const locationImage = document.createElement('img');
-    locationImage.src = './images/location.jpeg';
+    locationImage.src = location;
     locationImage.setAttribute('class', 'location-photo');
     locationImage.setAttribute('alt', "A photo of the location of Catfish Biff's along the south campus border of The Ohio State University");
     homePage.appendChild(locationImage);

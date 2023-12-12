@@ -2,6 +2,7 @@ import pageTemplate from './modules/page-template.js';
 import homeTemplate from './modules/home.js';
 import menuTemplate from './modules/menu.js';
 import contactTemplate from './modules/contact.js';
+import './style.css';
 
 const { createHeader, createFooter } = pageTemplate;
 const { createHomePage }  = homeTemplate;
